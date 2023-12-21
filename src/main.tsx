@@ -24,7 +24,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <ThemeProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
         <TonConnectUIProvider manifestUrl="https://verifier.ton.org/tonconnect-manifest.json">
-          <BrowserRouter basename="/verifier/">
+          <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
               <Route path="/interact" element={<ContractInteract />} />
               <Route path="/admin" element={<Admin />} />
